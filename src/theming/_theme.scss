@@ -1,0 +1,34 @@
+@import '~@angular/material/theming';
+@import 'pallete';
+
+@include mat-core();
+
+$deslifeless-primary: mat-palette($blue-pallete, 700, 300, 900);
+$deslifeless-accent:  mat-palette($cyan-pallete, 400, 300, 900);
+$deslifeless-warn:  mat-palette($red-pallete, 500, 300, 900);
+
+$deslifeless-light-theme:   mat-light-theme((
+  color: (
+    primary: $deslifeless-primary,
+    accent: $deslifeless-accent,
+    warn: $deslifeless-warn
+  )
+));
+
+// Include the default theme styles (color and default density)
+@include angular-material-theme($deslifeless-light-theme);
+
+// $dark-primary: mat-palette($mat-blue-grey);
+// $dark-accent:  mat-palette($mat-amber, A200, A100, A400);
+// $dark-warn:    mat-palette($mat-deep-orange);
+// $dark-theme:   mat-dark-theme((
+//   color: (
+//     primary: $dark-primary,
+//     accent: $dark-accent,
+//     warn: $dark-warn,
+//   )
+// ));
+
+// .deslifeless-dark-theme {
+//   @include angular-material-color($dark-theme);
+// }
